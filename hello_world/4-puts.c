@@ -2,9 +2,7 @@
 
 /**
  * main - Entry point
- * 
- * Description: 'Using the puts function to print statements'
- * 
+ * Description: 'Using the puts function to print statements' 
  * Return: Always 0 (Success)
  */
 
