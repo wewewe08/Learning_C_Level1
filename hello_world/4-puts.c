@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * 
- * Description: '\"Programming is like building a multilingual puzzle'
+ * Description: 'Using the puts function to print statements'
  * 
  * Return: Always 0 (Success)
  */
