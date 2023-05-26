@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main - Entry point
+/** 
+ * main - Entry point
  * Description: Print whether a randomly generated number is positive or negative
  * Return: always 0 (Successful)
  */

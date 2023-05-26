@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* main - Entry point
+/**
+ * main - Entry point
  * Description: Print last digit in number and if it is greater or less than 5
  * Return: always 0 (Successful)
  */
