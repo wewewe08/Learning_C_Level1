@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: print all single digit base10 numbers using putchar
+ * Description: print all single digit numbers with commas and spaces
  * Return: always 0 (Success)
  */
 
@@ -17,6 +17,14 @@ int main(void)
 	while(num <= end_num)
 	{
 		putchar('0' + num);
+
+		if (num == 9)
+		{
+			break;
+		}
+
+		putchar(',');
+		putchar(' ');
 		num++;
 	}
 
