@@ -2,7 +2,7 @@
 
 /**
  * print_sign - entry point
- * @c: integer value
+ * @n: integer value
  *
  * Description: check for integer sign
  *
