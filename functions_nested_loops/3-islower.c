@@ -2,6 +2,10 @@
 
 /**
  * _islower - entry point
+ * @c: integer value of ascii char
+ *
+ * Description: check for lowercase letters
+ *
  * Return: 0 or 1
  */
 
