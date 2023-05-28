@@ -7,4 +7,6 @@
 /* lets compiler know that this function exists somewhere  */
 int _putchar(char c);
 
+void print_alphabet(void);
+
 #endif
