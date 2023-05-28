@@ -5,6 +5,6 @@
 #define _PUT_CHAR_H
 
 /* lets compiler know that this function exists somewhere  */
-void _putchar(char c);
+int _putchar(char c);
 
 #endif
