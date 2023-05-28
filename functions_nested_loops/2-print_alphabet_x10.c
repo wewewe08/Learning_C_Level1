@@ -2,13 +2,13 @@
 
 /**
  * print_alphabet_x10 - entry point
- * Return: always void
+ * Return: void
  */
 
 void print_alphabet_x10(void)
 {
-	int iteration;
 	char start_letter, end_letter, letter;
+	int iteration;
 
 	iteration = 1;
 	start_letter = 'a';
@@ -24,7 +24,7 @@ void print_alphabet_x10(void)
 			letter++;
 		}
 		_putchar('\n');
-		letter = start_letter;
 		iteration++;
+		letter = start_letter;
 	}
 }
