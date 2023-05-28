@@ -17,7 +17,7 @@ void jack_bauer(void)
 
 	while (first_hours_num <= 2)
 	{
-		while (second_hours_num <= 3)
+		while (second_hours_num <= 9)
 		{
 			while (first_minutes_num <= 5)
 			{
@@ -35,6 +35,12 @@ void jack_bauer(void)
 				first_minutes_num++;
 			}
 			first_minutes_num = 0;
+
+			if (first_hours_num == 2 && second_hours_num == 3)
+			{
+				break;
+			}
+			
 			second_hours_num++;
 		}
 		second_hours_num = 0;
