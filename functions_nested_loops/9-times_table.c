@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_zero - entry point
+ * print_num - entry point
  * Description: prints num with comma and spaces
  * Return: void
  */
