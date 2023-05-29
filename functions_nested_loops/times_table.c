@@ -42,20 +42,7 @@ void print_double(int n, int last)
 
 void times_table(void)
 {
-	int multiple = 1, increment = 1, index = 0;
-
-	while (index < 10)
-	{
-		if (index == 9)
-		{
-			_putchar('0' + 0);
-			break;
-		}
-
-		print_num(0);
-		index++;
-	}
-	_putchar('\n');
+	int multiple = 0, increment = 1;
 
 	while (multiple <= 9)
 	{
