@@ -3,15 +3,22 @@
 /**
  * print_num - entry point
  * @n: integer to print
+ * @increment: number increment
  * Description: prints num with comma and spaces
  * Return: void
  */
 
-void print_num(int n)
+void print_num(int n, int multiple)
 {
 	_putchar('0' + n);
 	_putchar(',');
 	_putchar(' ');
+
+	if (n + multiple > 9)
+	{
+		return;
+	}
+
 	_putchar(' ');
 }
 
@@ -51,7 +58,7 @@ void times_table(void)
 	{
 		int last_num = multiple * 9; /* last number in the sequence */
 		
-		print_num(0);
+		print_num(0, 0);
 
 		while (increment <= 9) /* multiply multiple by increment */
 		{
@@ -69,7 +76,7 @@ void times_table(void)
 				_putchar('0' + curr_num); /* only print number and not commas and spaces  */
 				break;
 			}
-			print_num(curr_num);
+			print_num(curr_num, multiple);
 			increment++;
 		}
 		_putchar('\n');
