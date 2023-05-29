@@ -2,6 +2,7 @@
 
 /**
  * print_num - entry point
+ * @n: integer to print
  * Description: prints num with comma and spaces
  * Return: void
  */
@@ -16,6 +17,8 @@ void print_num(int n)
 
 /**
  * print_double - entry point
+ * @n: integer to print
+ * @last: last multiple
  * Description: prints double digit numbers
  * Return: void
  */
@@ -49,7 +52,7 @@ void times_table(void)
 		int last_num = multiple * 9;
 		print_num(0);
 
-		while(increment <= 9)
+		while (increment <= 9)
 		{
 			int curr_num = multiple * increment;
 			if (curr_num > 9)
