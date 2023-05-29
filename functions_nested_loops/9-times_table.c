@@ -3,7 +3,7 @@
 /**
  * print_num - entry point
  * @n: integer to print
- * @increment: number increment
+ * @multiple: current multiple
  * Description: prints num with comma and spaces
  * Return: void
  */
