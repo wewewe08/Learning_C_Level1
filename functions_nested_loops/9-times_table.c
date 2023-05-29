@@ -50,11 +50,13 @@ void times_table(void)
 	while (multiple <= 9)
 	{
 		int last_num = multiple * 9;
+		
 		print_num(0);
 
 		while (increment <= 9)
 		{
 			int curr_num = multiple * increment;
+			
 			if (curr_num > 9)
 			{
 				print_double(curr_num, last_num);
@@ -67,7 +69,6 @@ void times_table(void)
 				_putchar('0' + curr_num);
 				break;
 			}
-			
 			print_num(curr_num);
 			increment++;
 		}
