@@ -1,104 +1,75 @@
 #include "main.h"
 
 /**
+ * print_zero - entry point
+ * Description: prints num with comma and spaces
+ * Return: void
+ */
+
+void print_num(int n)
+{
+	_putchar('0' + n);
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+}
+
+/**
+ * print_double - entry point
+ * Description: prints double digit numbers
+ * Return: void
+ */
+
+void print_double(int n, int last)
+{
+	_putchar('0' + (n / 10)); /* first digit */
+	_putchar('0' + (n % 10)); /* second digit */
+
+	if (n == last)
+	{
+		return;
+	}
+
+	_putchar(',');
+	_putchar(' ');
+}
+
+/**
  * times_table - entry point
  * Description: Print times table
  * Return: void
  */
 
-void print_zero()
-{
-	_putchar('0' + 0);
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-}
-
-void print_single_digit(int n, int last)
-{
-	_putchar('0' + n);
-
-	if (n == last)
-	{
-		return;
-	}
-
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-}
-
-void print_double_digit(int n, int last)
-{
-	int first_digit, second_digit;
-	first_digit = n / 10;
-	second_digit = n % 10;
-
-	_putchar('0' + first_digit);
-	_putchar('0' + second_digit);
-
-	if (n == last)
-	{
-		return;
-	}
-
-	_putchar(',');
-	_putchar(' ');
-}
-
 void times_table(void)
 {
-	int multiple_num, last_num, iteration;
-	multiple_num = 1;
-	iteration = 1;
+	int multiple = 0, increment = 1;
 
-	while (iteration <= 11)
+	while (multiple <= 9)
 	{
-		if (iteration == 10)
+		int last_num = multiple * 9;
+		print_num(0);
+
+		while(increment <= 9)
 		{
-			_putchar('0' + 0);
-			break;
-		}
-
-		print_zero();
-		iteration++;
-	}
-
-	iteration = 1;
-	_putchar('\n');
-
-	while (iteration <= 9)
-	{
-		last_num = multiple_num * 9;
-
-		print_zero();
-		while (multiple_num <= last_num)
-		{
-			if (multiple_num <= 9)
+			int curr_num = multiple * increment;
+			if (curr_num > 9)
 			{
-				print_single_digit(multiple_num, last_num);
+				print_double(curr_num, last_num);
+				increment++;
+				continue;
 			}
-			else if (multiple_num > 9)
+
+			if ((curr_num == last_num && curr_num != 0) || (increment == 9))
 			{
-				print_double_digit(multiple_num, last_num);
-			}
-			else if (multiple_num == last_num)
-			{
-				if (multiple_num > 9)
-				{
-					print_double_digit(multiple_num, last_num);
-				}
-				else
-				{
-					print_single_digit(multiple_num, last_num);
-				}
+				_putchar('0' + curr_num);
 				break;
 			}
-
-			multiple_num += iteration;
+			
+			print_num(curr_num);
+			increment++;
 		}
 		_putchar('\n');
-		iteration++;
-		multiple_num = iteration;
+		increment = 1;
+		multiple++;
 	}
 }
