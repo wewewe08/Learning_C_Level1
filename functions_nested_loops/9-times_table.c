@@ -47,33 +47,33 @@ void times_table(void)
 {
 	int multiple = 0, increment = 1;
 
-	while (multiple <= 9)
+	while (multiple <= 9) /* 1 - 9 */
 	{
-		int last_num = multiple * 9;
+		int last_num = multiple * 9; /* last number in the sequence */
 		
 		print_num(0);
 
-		while (increment <= 9)
+		while (increment <= 9) /* multiply multiple by increment */
 		{
 			int curr_num = multiple * increment;
 			
-			if (curr_num > 9)
+			if (curr_num > 9) /* if current multiple is a double digit  */
 			{
 				print_double(curr_num, last_num);
 				increment++;
 				continue;
 			}
 
-			if ((curr_num == last_num && curr_num != 0) || (increment == 9))
+			if ((curr_num == last_num && curr_num != 0) || (increment == 9)) /* if it is last num or last 0 */
 			{
-				_putchar('0' + curr_num);
+				_putchar('0' + curr_num); /* only print number and not commas and spaces  */
 				break;
 			}
 			print_num(curr_num);
 			increment++;
 		}
 		_putchar('\n');
-		increment = 1;
+		increment = 1; /* reset increment */
 		multiple++;
 	}
 }
