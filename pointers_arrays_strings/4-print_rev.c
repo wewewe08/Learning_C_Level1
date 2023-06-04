@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_rev - entry point
@@ -9,6 +10,8 @@
 void print_rev(char *s)
 {
 	int count, index;
+	char *start;
+	start = s;
 
 	/* get length of string */
 	while (*s != '\0')
@@ -17,12 +20,14 @@ void print_rev(char *s)
 		s++; /* moves to next address in memory and also sets s to the last char value to reverse */
 	}
 
-	s--;
-
 	for (index = 0; index < count; index++)
 	{
 		char c = *s; /* this will be set to the last char value bcus of loop from above */
 		_putchar(c);
+		if (s == start)
+		{
+			break;
+		}
 		s--; /* moving backwards now since we starting from the last letter */
 	}
 	_putchar('\n');
