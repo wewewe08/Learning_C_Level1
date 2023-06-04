@@ -10,8 +10,8 @@
 void print_rev(char *s)
 {
 	int count, index;
-	char *start;
-	start = s;
+	char *start; /* pointer to store the original address */
+	start = s; /* set the address of the pointer to the address of pointer s */
 
 	/* get length of string */
 	while (*s != '\0')
