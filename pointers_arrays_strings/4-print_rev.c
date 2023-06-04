@@ -23,7 +23,7 @@ void print_rev(char *s)
 	{
 		char c = *s; /* this will be set to the last char value bcus of loop from above */
 		_putchar(c);
-		if (s == start)
+		if (s == start) /* checks to see if current address is the same address as starting letter */
 		{
 			break;
 		}
