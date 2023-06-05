@@ -15,7 +15,7 @@ void print_array(int *a, int n)
 	{
 		int num = a[index];
 		
-		if (index == n - 1)
+		if (index == n - 1) /* the last number to be printed */
 		{
 			printf("%d", num);
 			break;
