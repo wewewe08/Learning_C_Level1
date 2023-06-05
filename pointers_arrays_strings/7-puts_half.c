@@ -15,16 +15,18 @@ void puts_half(char *str)
 		counter++;
 	}
 
-	if (counter % 2 == 1)
-	{
-		counter--;
-	}
-
 	for (index = 0; str[index] != '\0'; index++)
 	{
 		char ch = str[index];
 
-		if (index < (counter / 2)) /* first half of string */
+		if (counter % 2 == 1)
+		{
+			if (index <= ((counter - 1) / 2))
+			{
+				continue;
+			}
+		}
+		else if (index < (counter / 2)) /* first half of string */
 		{
 			continue;
 		}
