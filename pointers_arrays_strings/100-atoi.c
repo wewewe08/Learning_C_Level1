@@ -8,17 +8,13 @@
 
 int _atoi(char *s)
 {
-	int index, positive = 0, negative = 0;
+	int index, negative = 0;
 	unsigned int result = 0;
 
 	for (index = 0; s[index] != '\0'; index++)
 	{
 		/* counting amount of signs */
-		if (s[index] == '+')
-		{
-			positive++;
-		}
-		else if (s[index] == '-')
+		if (s[index] == '-')
 		{
 			negative++;
 		}
@@ -41,7 +37,7 @@ int _atoi(char *s)
 	}
 
 	/* multiply by -1 to make integer negative */
-	if ((positive == 0 || positive > 0) && negative % 2 == 1)
+	if (negative % 2 == 1)
 	{
 		result = result * -1;
 	}
