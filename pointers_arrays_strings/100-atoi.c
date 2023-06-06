@@ -30,6 +30,8 @@ int _atoi(char *s)
 			 * ex/ '9' - '0' would be 57 - 48, which is 9 as an integer
 			 */
 			result = (result * 10) + (s[index] - '0');
+
+			/* if the next char in the string is a non-integer, break out of loop */
 			if (s[index + 1] < 48 || s[index + 1] > 57)
 			{
 				break;
