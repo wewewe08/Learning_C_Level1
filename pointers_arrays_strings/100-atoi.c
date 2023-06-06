@@ -8,7 +8,8 @@
 
 int _atoi(char *s)
 {
-	int index, result = 0, positive = 0, negative = 0;
+	int index, positive = 0, negative = 0;
+	unsigned int result = 0;
 
 	for (index = 0; s[index] != '\0'; index++)
 	{
