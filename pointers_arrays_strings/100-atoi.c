@@ -26,7 +26,7 @@ int _atoi(char *s)
 		if (s[index] >= 48 && s[index] <= 57)
 		{
 			/* result * 10 is to shift the numbers down one place
-			 * s[index] - '0' substracts the ascii values to get the actual integer
+			 * s[index] - '0' subtracts the ascii values to get the actual integer
 			 * ex/ '9' - '0' would be 57 - 48, which is 9 as an integer
 			 */
 			result = (result * 10) + (s[index] - '0');
