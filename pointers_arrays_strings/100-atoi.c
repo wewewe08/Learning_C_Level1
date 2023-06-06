@@ -23,7 +23,7 @@ int _atoi(char *s)
 		}
 
 		/* check if character is a number */
-		if (s[index] >= 48 && s[index] <= 57)
+		if (s[index] >= '0' && s[index] <= '9')
 		{
 			/* result * 10 is to shift the numbers down one place
 			 * s[index] - '0' subtracts the ascii values to get the actual integer
@@ -32,7 +32,7 @@ int _atoi(char *s)
 			result = (result * 10) + (s[index] - '0');
 
 			/* if the next char in the string is a non-integer, break out of loop */
-			if (s[index + 1] < 48 || s[index + 1] > 57)
+			if (s[index + 1] < '0' || s[index + 1] > '9')
 			{
 				break;
 			}
