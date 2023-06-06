@@ -40,7 +40,7 @@ int _atoi(char *s)
 	}
 
 	/* multiply by -1 to make integer negative */
-	if ((positive == 0 && negative % 2 == 1) || (positive > 0 && negative % 2 == 1))
+	if ((positive == 0 || positive > 0) && negative % 2 == 1)
 	{
 		result = result * -1;
 	}
