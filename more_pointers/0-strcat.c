@@ -16,12 +16,10 @@ char *_strcat(char *dest, char *src)
 	}
 
 	total_len = dest_len + src_len;
-	src_len = 0;
 
-	for (index = dest_len; index < total_len; index++)
+	for (index = dest_len, src_len = 0; index < total_len; index++, src_len++)
 	{
 		dest[index] = src[src_len];
-		src_len++;
 	}
 
 	dest[index] = '\0';
