@@ -6,7 +6,7 @@ char *string_toupper(char *c)
 
 	for (index = 0; c[index] != '\0'; index++)
 	{
-		if (c[index] >= 97 && c[index] <= 122)
+		if (c[index] >= 'a' && c[index] <= 'z')
 		{
 			c[index] = c[index] - 32; /* uppercase letter */
 		}
