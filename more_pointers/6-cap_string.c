@@ -15,17 +15,19 @@ char *cap_string(char *c)
 			continue;
 		}
 
-		if (c[string_index + 1] >= 'a' && c[string_index + 1] <= 'z')
+		/* loop over the array of separators */
+		for (arr_index = 0; arr_index < arr_len; arr_index++)
 		{
-			/* loop over the array of separators */
-			for (arr_index = 0; arr_index < arr_len; arr_index++)
+			/* if the separator is present in the string */
+			if (separators[arr_index] == c[string_index])
 			{
-				/* if the separator is present in the string */
-				if (separators[arr_index] == c[string_index])
+				/* check if the next character is a lowercase letter */
+				if (c[string_index + 1] >= 'a' && c[string_index + 1] <= 'z')
 				{
 					c[string_index + 1] -= 32; /* set the letter to upper case */
 					break; /* no need to check the rest of the array for this char, so break and move to next char in the string */
 				}
+				
 			}
 		}
 	}
