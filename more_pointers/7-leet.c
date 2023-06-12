@@ -10,7 +10,7 @@ char *leet(char *c)
 
 	for (count = 0; c[count] != '\0'; count++)
 	{
-		/* loop over the letters array */
+		/* getting the index for both arrays since they both have length of 5 */
 		for (index = 0; index < 5; index++)
 		{
 			/* check if the string has the specified lowercase letter or uppercase letter */
