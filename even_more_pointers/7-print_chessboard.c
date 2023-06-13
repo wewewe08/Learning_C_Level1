@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 void print_chessboard(char (*a)[8])
 {
@@ -10,9 +11,9 @@ void print_chessboard(char (*a)[8])
 		{
 			if ((a[row][col] >= 'a' && a[row][col] <= 'z') || (a[row][col] >= 'A' && a[row][col] <= 'Z'))
 			{
-				printf("%c", a[row][col]);
+				_putchar(a[row][col]);
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
